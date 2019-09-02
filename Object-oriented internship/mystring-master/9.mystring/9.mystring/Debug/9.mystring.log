@@ -1,0 +1,5 @@
+﻿  9.mystring.cpp
+g:\课设\9.mystring\9.mystring\9.mystring.cpp(32): warning C4018: “>”: 有符号/无符号不匹配
+g:\课设\9.mystring\9.mystring\9.mystring.cpp(92): warning C4018: “>”: 有符号/无符号不匹配
+g:\课设\9.mystring\9.mystring\9.mystring.cpp(105): warning C4018: “<”: 有符号/无符号不匹配
+  9.mystring.vcxproj -> G:\课设\9.mystring\Debug\9.mystring.exe

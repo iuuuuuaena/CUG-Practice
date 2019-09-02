@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Words.txt</file>
+        <file>1.ico</file>
+    </qresource>
+</RCC>
