@@ -9,8 +9,8 @@
 <center>改变光源位置</center>
 <img src="./img/自动旋转模型.gif" alt="自动旋转模型" title="自动旋转模型" style="zoom:50%;" />
 <center>自动旋转模型</center>
-### 1.2 实现
 
+### 1.2 实现
 #### 1.2.1 改变颜色
 
 用全局变量*colorMat*定义茶壶的颜色，添加*glutKeyboardFunc*函数，当按下c建时，改变*colorMat*即可。
@@ -37,6 +37,7 @@
 <center>装入bunny_1k.obj</center>
 <img src="./img/基于mouse的相机控制.gif" alt="基于mouse的相机控制" style="zoom:50%;" />
 <center>基于mouse的相机控制</center>
+
 ### 2.2 实现
 
 #### 2.2.1 格网装入和显示
