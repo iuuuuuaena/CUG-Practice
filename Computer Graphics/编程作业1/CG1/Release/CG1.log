@@ -1,0 +1,74 @@
+﻿  stdafx.cpp
+  BezierCurve.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\beziercurve.cpp(21): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\beziercurve.cpp(34): warning C4018: “<”: 有符号/无符号不匹配
+  BezierPatch.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\bezierpatch.cpp(28): warning C4018: “<=”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\bezierpatch.cpp(30): warning C4018: “<=”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\bezierpatch.cpp(62): warning C4018: “<”: 有符号/无符号不匹配
+  BSplineCurve.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\bsplinecurve.cpp(29): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\bsplinecurve.cpp(66): warning C4018: “<”: 有符号/无符号不匹配
+  CG1.cpp
+  Curve.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\curve.cpp(25): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\curve.cpp(39): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\curve.cpp(67): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\curve.cpp(92): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\curve.cpp(104): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\curve.cpp(119): warning C4018: “<”: 有符号/无符号不匹配
+  glCanvas.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+  matrix.cpp
+h:\xhf\c++\cg1\cg1\matrix.cpp(337): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: 参见“fscanf”的声明
+h:\xhf\c++\cg1\cg1\matrix.cpp(350): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: 参见“fscanf”的声明
+  Spline.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(45): warning C4018: “>”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(63): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(107): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(109): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(112): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(121): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(160): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(162): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(165): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline.cpp(174): warning C4018: “<”: 有符号/无符号不匹配
+  spline_parser.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(20): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: 参见“fopen”的声明
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(202): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: 参见“fopen”的声明
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(214): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: 参见“fopen”的声明
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(232): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: 参见“fopen”的声明
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(244): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: 参见“fscanf”的声明
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(255): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: 参见“fscanf”的声明
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(266): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: 参见“fscanf”的声明
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(277): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: 参见“fscanf”的声明
+h:\xhf\c++\cg1\cg1\spline_parser.cpp(288): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: 参见“fscanf”的声明
+  Surface.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+  SurfaceOfRevolution.cpp
+h:\xhf\c++\cg1\cg1\spline.h(42): warning C4018: “<”: 有符号/无符号不匹配
+  test.cpp
+  triangle_mesh.cpp
+  正在生成代码
+  0 of 263 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  CG1.vcxproj -> H:\XHF\C++\CG1\Release\CG1.exe
