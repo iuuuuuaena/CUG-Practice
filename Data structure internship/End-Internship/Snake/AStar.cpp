@@ -1,5 +1,5 @@
 #include "AStar.h"
-//µ±Ç°ÓÎÏ·µÄ×´Ì¬ 0±íÊ¾Â·£¬1±íÊ¾Æğµã£¬2±íÊ¾ÕÏ°­£¬3±íÊ¾ÖÕµã
+//å½“å‰æ¸¸æˆçš„çŠ¶æ€ 0è¡¨ç¤ºè·¯ï¼Œ1è¡¨ç¤ºèµ·ç‚¹ï¼Œ2è¡¨ç¤ºéšœç¢ï¼Œ3è¡¨ç¤ºç»ˆç‚¹
 AStar::AStar(int **newmap,int x1,int y1,int x2,int y2) {
 	for (int i = 0; i < 28; i++) {
 		for (int j = 0; j < 38; j++) {
@@ -23,10 +23,10 @@ bool AStar::FindPath() {
 		//log("%d %d",i++,OpenList.size());
 		current = this->minNode();
 		OpenList.pop_front();
-		map[current->y][current->x] = 4;//·ÃÎÊ¹ı
+		map[current->y][current->x] = 4;//è®¿é—®è¿‡
 		//current->isVisit = true;
 		//ClosedList.push_back(current);
-		if (current->x > 0) {//×ó±ß
+		if (current->x > 0) {//å·¦è¾¹
 			if (map[current->y][current->x - 1] ==0|| map[current->y][current->x - 1] == 3) {
 				temp = isContain(current->x - 1, current->y);
 				if (temp) {
@@ -42,7 +42,7 @@ bool AStar::FindPath() {
 				}
 			}
 		}
-		if (current->x < 37) {//ÓÒ±ß
+		if (current->x < 37) {//å³è¾¹
 			if (map[current->y][current->x + 1] == 0 || map[current->y][current->x + 1] == 3) {
 				temp = isContain(current->x + 1, current->y);
 				if (temp) {
@@ -58,7 +58,7 @@ bool AStar::FindPath() {
 				}
 			}
 		}
-		if (current->y < 27) {//ÉÏ±ß
+		if (current->y < 27) {//ä¸Šè¾¹
 			if (map[current->y+1][current->x] == 0 || map[current->y + 1][current->x] == 3) {
 				temp = isContain(current->x , current->y+1);
 				if (temp) {
@@ -74,7 +74,7 @@ bool AStar::FindPath() {
 				}
 			}
 		}
-		if (current->y > 0) {//ÏÂ±ß
+		if (current->y > 0) {//ä¸‹è¾¹
 			if (map[current->y - 1][current->x] == 0 || map[current->y - 1][current->x] == 3) {
 				temp = isContain(current->x, current->y - 1);
 				if (temp) {

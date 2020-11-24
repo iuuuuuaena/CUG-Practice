@@ -8,10 +8,10 @@ USING_NS_CC;
 
 struct AStarNode
 {
-	int f;//¾àÀë¹À¼ÆÖµ
-	int g;//¸Ãµãµ½ÆğµãµÄ¾àÀë
-	int h;//¸Ãµãµ½ÖÕµãµÄ¹ÀËãÖµ
-	AStarNode *parent;//Ç°Çıµã
+	int f;//è·ç¦»ä¼°è®¡å€¼
+	int g;//è¯¥ç‚¹åˆ°èµ·ç‚¹çš„è·ç¦»
+	int h;//è¯¥ç‚¹åˆ°ç»ˆç‚¹çš„ä¼°ç®—å€¼
+	AStarNode *parent;//å‰é©±ç‚¹
 	int x;
 	int y;
 	int xend, yend;
