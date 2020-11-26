@@ -1,0 +1,676 @@
+{
+  "test1": {
+    "args": {
+      "class_": "LuxuryFirstClass",
+      "start": "cny",
+      "area": "domestic",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        },
+        {
+          "id": 1,
+          "length": 90,
+          "width": 50,
+          "height": 30,
+          "weight": 26,
+          "type": "special1"
+        },
+        {
+          "id": 2,
+          "length": 60,
+          "width": 20,
+          "height": 10,
+          "weight": 8,
+          "type": "special2"
+        },
+        {
+          "id": 3,
+          "length": 10,
+          "width": 6,
+          "height": 4,
+          "weight": 5,
+          "type": "special3"
+        }
+      ]
+    },
+    "result": "0cny,3090cny"
+  },
+  "test2": {
+    "args": {
+      "class_": "FirstClass",
+      "start": "eur",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "baby",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        },
+        {
+          "id": 1,
+          "length": 90,
+          "width": 50,
+          "height": 30,
+          "weight": 26,
+          "type": "special1"
+        },
+        {
+          "id": 2,
+          "length": 60,
+          "width": 20,
+          "height": 10,
+          "weight": 8,
+          "type": "special2"
+        },
+        {
+          "id": 3,
+          "length": 10,
+          "width": 6,
+          "height": 4,
+          "weight": 5,
+          "type": "special3"
+        }
+      ]
+    },
+    "result": "area1 not support eur"
+  },
+  "test3": {
+    "args": {
+      "class_": "BusinessClass",
+      "start": "cad",
+      "area": "area2",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        },
+        {
+          "id": 1,
+          "length": 90,
+          "width": 50,
+          "height": 30,
+          "weight": 26,
+          "type": "special1"
+        },
+        {
+          "id": 2,
+          "length": 60,
+          "width": 20,
+          "height": 10,
+          "weight": 8,
+          "type": "special2"
+        },
+        {
+          "id": 3,
+          "length": 10,
+          "width": 6,
+          "height": 4,
+          "weight": 5,
+          "type": "special3"
+        }
+      ]
+    },
+    "result": "area2 not support cad"
+  },
+  "test4": {
+    "args": {
+      "class_": "EnjoyEconomyClass",
+      "start": "usd",
+      "area": "area3",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        },
+        {
+          "id": 1,
+          "length": 90,
+          "width": 50,
+          "height": 30,
+          "weight": 26,
+          "type": "special1"
+        },
+        {
+          "id": 2,
+          "length": 60,
+          "width": 20,
+          "height": 10,
+          "weight": 8,
+          "type": "special2"
+        },
+        {
+          "id": 3,
+          "length": 10,
+          "width": 6,
+          "height": 4,
+          "weight": 5,
+          "type": "special3"
+        }
+      ]
+    },
+    "result": "75usd,3090cny"
+  },
+  "test5": {
+    "args": {
+      "class_": "SuperEconomyClass",
+      "start": "cny",
+      "area": "area4",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        },
+        {
+          "id": 1,
+          "length": 90,
+          "width": 50,
+          "height": 30,
+          "weight": 26,
+          "type": "special1"
+        },
+        {
+          "id": 2,
+          "length": 60,
+          "width": 20,
+          "height": 10,
+          "weight": 8,
+          "type": "special2"
+        },
+        {
+          "id": 3,
+          "length": 10,
+          "width": 6,
+          "height": 4,
+          "weight": 5,
+          "type": "special3"
+        }
+      ]
+    },
+    "result": "1040cny,3090cny"
+  },
+  "test6": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area5",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        },
+        {
+          "id": 1,
+          "length": 90,
+          "width": 50,
+          "height": 30,
+          "weight": 26,
+          "type": "special1"
+        },
+        {
+          "id": 2,
+          "length": 60,
+          "width": 20,
+          "height": 10,
+          "weight": 8,
+          "type": "special2"
+        },
+        {
+          "id": 3,
+          "length": 10,
+          "width": 6,
+          "height": 4,
+          "weight": 5,
+          "type": "special3"
+        }
+      ]
+    },
+    "result": "520cny,3090cny"
+  },
+  "test7": {
+    "args": {
+      "start": "cny",
+      "area": "area5",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "输入不完整"
+  },
+  "test8": {
+    "args": {
+      "class_": "hhh",
+      "start": "cny",
+      "area": "area5",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "Not support class"
+  },
+  "test9": {
+    "args": {
+      "class_": "EconomyClass",
+      "area": "area5",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "输入不完整"
+  },
+  "test10": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "hhh",
+      "area": "area5",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "Not support start"
+  },
+  "test11": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "输入不完整"
+  },
+  "test12": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "hhh",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "Not support area"
+  },
+  "test13": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "输入不完整"
+  },
+  "test14": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": -1000,
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "输入了负值"
+  },
+  "test15": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": "hhh",
+      "passenger": "common",
+      "baggages": []
+    },
+    "result": "输入不规范"
+  },
+  "test16": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "baggages": []
+    },
+    "result": "输入不完整"
+  },
+  "test17": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "hhh",
+      "baggages": []
+    },
+    "result": "Not support passenger"
+  },
+  "test18": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "baggage输入不完整"
+  },
+  "test19": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "baggage输入不完整"
+  },
+  "test20": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": -100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "输入了负值"
+  },
+  "test21": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": "hhh",
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "输入不规范"
+  },
+  "test22": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "baggage输入不完整"
+  },
+  "test23": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": -60,
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "输入了负值"
+  },
+  "test24": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": "hhh",
+          "height": 40,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "输入不规范"
+  },
+  "test25": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "baggage输入不完整"
+  },
+  "test26": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": -40,
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "输入了负值"
+  },
+  "test27": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": "hhh",
+          "weight": 23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "输入不规范"
+  },
+  "test28": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "baggage输入不完整"
+  },
+  "test29": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": -23,
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "输入了负值"
+  },
+  "test30": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": "hhh",
+          "type": "usual"
+        }
+      ]
+    },
+    "result": "输入不规范"
+  },
+  "test31": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23
+        }
+      ]
+    },
+    "result": "baggage输入不完整"
+  },
+  "test32": {
+    "args": {
+      "class_": "EconomyClass",
+      "start": "cny",
+      "area": "area1",
+      "fare": 1000,
+      "passenger": "common",
+      "baggages": [
+        {
+          "id": 0,
+          "length": 100,
+          "width": 60,
+          "height": 40,
+          "weight": 23,
+          "type": "hhh"
+        }
+      ]
+    },
+    "result": "Not support special type"
+  }
+}

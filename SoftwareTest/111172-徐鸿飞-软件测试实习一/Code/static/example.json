@@ -1,0 +1,23 @@
+{
+  "class": 0,
+  "start": "",
+  "area": "",
+  "fare": "",
+  "baggages": [
+    {
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "weight": 0,
+      "type": ""
+    },
+    {
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "weight": 0,
+      "type": ""
+    }
+  ],
+  "result": "0cny"
+}

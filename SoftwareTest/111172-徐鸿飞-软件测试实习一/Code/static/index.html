@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baggage Consignment Calculator</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+<body class="">
+<style>
+    .layui-input.layui-unselect {
+        /*border: 0;*/
+        /*height: 120%;*/
+    }
+
+    /*.layui-select-title,*/
+    /*.layui-form-select {*/
+    /*    height: 100%;*/
+    /*}*/
+
+    /*.layui-table-cell {*/
+    /*    overflow: initial;*/
+    /*}*/
+    .layui-form-select dl {
+        position: fixed;
+        top: initial;
+        left: initial;
+        min-width: 220px;
+    }
+</style>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+    <legend>国航行李托运计算器</legend>
+</fieldset>
+<form class="layui-form" lay-filter="example">
+    <div class="layui-form-item">
+        <label class="layui-form-label">乘客类型</label>
+        <div class="layui-input-block">
+            <select name="passenger" lay-verify="required">
+                <option value=""></option>
+                <option value='common'>成人或儿童</option>
+                <option value='baby'>婴儿</option>
+            </select>
+        </div>
+    </div>
+    <!--    class-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">选择舱位</label>
+        <div class="layui-input-block">
+            <select name="class_" lay-verify="required">
+                <option value=""></option>
+                <option value='LuxuryFirstClass'>豪华头等舱</option>
+                <option value='FirstClass'>头等舱</option>
+                <option value='BusinessClass'>公务舱</option>
+                <option value='EnjoyEconomyClass'>悦享经济舱</option>
+                <option value='SuperEconomyClass'>超级经济舱</option>
+                <option value='EconomyClass'>经济舱</option>
+            </select>
+        </div>
+    </div>
+    <!--    start-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">选择起点</label>
+        <div class="layui-input-block">
+            <select name="start" lay-verify="required">
+                <option value=""></option>
+                <option value="cny">中国境内</option>
+                <option value="eur">欧元区</option>
+                <option value="cad">加拿大</option>
+                <option value="usd">其他(美元)</option>
+            </select>
+        </div>
+    </div>
+    <!--    area-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">选择区域</label>
+        <div class="layui-input-block">
+            <select name="area" lay-verify="required">
+                <option value=""></option>
+                <option value="domestic">国内地区</option>
+                <option value="area1">地区一</option>
+                <option value="area2">地区二</option>
+                <option value="area3">地区三</option>
+                <option value="area4">地区四</option>
+                <option value="area5">地区五</option>
+            </select>
+        </div>
+    </div>
+    <!--    fare-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">票价</label>
+        <div class="layui-input-block">
+            <input type="number" name="fare" lay-verify="required" autocomplete="off"
+                   placeholder="当日的直达航班经济舱普通票价，国际航班请不要修改" class="layui-input" value="0">
+        </div>
+    </div>
+    <!--    baggage-->
+    <div class="layui-form-item" style="padding-left: 60px;padding-right: 30px">
+        <table class="layui-hide" id="table" lay-filter="table"></table>
+        <!--        <label class="layui-form-label">行李1</label>-->
+        <!--        <fieldset class="layui-elem-field">-->
+        <!--            <legend style="font-size: 15px">行李1</legend>-->
+        <!--            <div class="layui-field-box">-->
+        <!--                <div class="layui-inline">-->
+        <!--                    <label class="layui-form-label">长</label>-->
+        <!--                    <div class="layui-input-inline">-->
+        <!--                        <input type="number" name="length" lay-verify="required" autocomplete="off"-->
+        <!--                               placeholder="" class="layui-input">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <div class="layui-inline">-->
+        <!--                    <label class="layui-form-label">宽</label>-->
+        <!--                    <div class="layui-input-inline">-->
+        <!--                        <input type="number" name="width" lay-verify="required" autocomplete="off"-->
+        <!--                               placeholder="" class="layui-input">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <div class="layui-inline">-->
+        <!--                    <label class="layui-form-label">高</label>-->
+        <!--                    <div class="layui-input-inline">-->
+        <!--                        <input type="number" name="height" lay-verify="required" autocomplete="off"-->
+        <!--                               placeholder="" class="layui-input">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--&lt;!&ndash;                <br>&ndash;&gt;-->
+        <!--                <div class="layui-inline">-->
+        <!--                    <label class="layui-form-label">重量</label>-->
+        <!--                    <div class="layui-input-inline">-->
+        <!--                        <input type="number" name="weight" lay-verify="required" autocomplete="off"-->
+        <!--                               placeholder="" class="layui-input">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <div class="layui-inline">-->
+        <!--                    <label class="layui-form-label">类型</label>-->
+        <!--                    <div class="layui-input-inline">-->
+        <!--                        <select name="type" lay-verify="required">-->
+        <!--                            <option value="">请选择类型</option>-->
+        <!--                            <option value="0">正常行李</option>-->
+        <!--                            <option value="1">特殊行李1</option>-->
+        <!--                            <option value="2">特殊行李2</option>-->
+        <!--                        </select>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+
+        <!--            </div>-->
+        <!--        </fieldset>-->
+    </div>
+    <!--    action-->
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button type="button" class="layui-btn layui-btn-normal" id="LAY-component-form-addBaggage">增加行李</button>
+            <button type="button" class="layui-btn layui-btn-normal" id="LAY-component-form-setval">测试值</button>
+            <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+        </div>
+    </div>
+</form>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+    <legend>一些问题</legend>
+</fieldset>
+<div style="padding: 20px;">
+    <div class="layui-collapse" lay-filter="test">
+        <div class="layui-colla-item">
+            <h4 class="layui-colla-title">关于单位问题？</h4>
+            <div class="layui-colla-content">
+                <p>本页面使用的长度单位均为cm，重量单位为kg。</p>
+            </div>
+        </div>
+        <div class="layui-colla-item">
+            <h4 class="layui-colla-title">关于地区问题？</h4>
+            <div class="layui-colla-content">
+                <p>区域一(B)：美洲（除美国/加拿大外）/加勒比海地区与欧洲/非洲/中东/亚洲/西南太平洋之间的航线；</p>
+                <p>区域二(A)：欧洲/中东与非洲/亚洲/西南太平洋之间航线；日本与西南太平洋之间航线；日本/西南太平洋与亚洲（不含日本及西南太平洋）/非洲之间航线；</p>
+                <p>区域三(B)：加拿大与美洲（除美国/加拿大外）/加勒比海地区/欧洲/非洲/中东/亚洲/西南太平洋之间航线；</p>
+                <p>区域四(A)：美国（含夏威夷）与美洲（除美国外）/加勒比海地区/欧洲/非洲/中东/亚洲/西南太平洋之间航线；</p>
+                <p>区域五(B)：非洲与亚洲（除日本外)之间航线；欧洲与中东之间航线；亚洲（除日本)内航线；美洲（除美国/加拿大）及加勒比海地区内航线；上述未列明的航线;</p>
+            </div>
+        </div>
+        <div class="layui-colla-item">
+            <h4 class="layui-colla-title">关于特殊行李问题？</h4>
+            <div class="layui-colla-content">
+                <p>类型1：导盲犬/助听犬/精神抚慰犬</p>
+                <p>类型2：皮划艇/独木舟、悬挂式滑翔运动用具、雪橇/水撬。 冲浪板、风帆冲浪用具、橡皮艇或船</p>
+                <p>类型3: 小型电器或仪器、媒体设备</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="typeSelect">
+    <select name="type" lay-verify="required" id="select_{{d.id}}">
+        <option value="">请选择类型</option>
+        <option value="usual">正常行李</option>
+        <option value="special1">类型1</option>
+        <option value="special2">类型2</option>
+        <option value="special3">类型3</option>
+    </select>
+</script>
+
+<script type="text/html" id="barDemo">
+    <!--  <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>-->
+    <!--  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>-->
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+<script src="./layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['form', 'layedit', 'laydate', 'element', 'table'], function () {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate
+            , element = layui.element
+            , $ = layui.jquery
+            , table = layui.table;
+
+        var id = 1;
+        var tableIns = table.render({
+            elem: '#table',
+            // height:1000,
+            cellMinWidth: 80,
+            cols: [[
+                {type: 'checkbox'},
+                {field: 'id', title: 'id',hide:false},
+                {field: 'length', title: "长", edit: 'text'},
+                {field: 'width', title: "宽", edit: 'text'},
+                {field: 'height', title: "高", edit: 'text'},
+                {field: 'weight', title: "重量", edit: 'text'},
+                {field: 'type', title: "类型", width: 200, templet: '#typeSelect'},
+                {fixed: 'right', title: "操作", width: 78, align: 'center', toolbar: '#barDemo'}
+            ]],
+            data: [{id:0}],
+            even: true,
+            id:'table'
+            // page:true
+        });
+
+        table.on('tool(table)', function (obj) {
+            var data = obj.data;
+            if (obj.event === 'detail') {
+                layer.msg('ID：' + data.id + ' 的查看操作');
+            } else if (obj.event === 'del') {
+                layer.confirm('真的删除行么', function (index) {
+                    console.log(obj);
+                    obj.del();
+                    layer.close(index);
+                    tableIns.config.data.remove(obj.data);
+                    console.log(tableIns);
+                });
+            } else if (obj.event === 'edit') {
+                layer.alert('编辑行：<br>' + JSON.stringify(data))
+            }
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function (data) {
+            var checkStatus = table.checkStatus('table')
+                , tabledata = checkStatus.data;
+            for (let i=0;i<tabledata.length;++i){
+                if (isNaN(Number(tabledata[i].length))||isNaN(Number(tabledata[i].width))||isNaN(Number(tabledata[i].height))||isNaN(Number(tabledata[i].weight))){
+                    layer.msg("表格中必须填入为数字");
+                    return false;
+                }
+                tabledata[i].type=$("#select_"+tabledata[i].id).val();
+            }
+            console.log(tabledata);
+            postdata=data.field;
+            postdata.baggages=tabledata;
+            $.ajax({
+                url: "cal",
+                contentType: 'application/json; charset=UTF-8',
+                dataType: "json",
+                async: true,//请求是否异步，默认为异步，这也是ajax重要特性
+                data: JSON.stringify(postdata),
+                type: "post",   //请求方式,
+                crossDomain: true,
+                beforeSend: function () {
+                    //请求前的处理
+                },
+                success: function (data) {
+                    //请求成功时处理
+                    layer.open({
+                        type:1,
+                        title:"计算结果",
+                        offset:'auto',
+                        area: ['390px', '260px'],
+                        content:JSON.stringify(data),
+                        btn:'关闭',
+                        shade:0,
+                        maxmin: true,
+                        yes:function () {
+                            layer.closeAll();
+                        }
+                    });
+                    // layer.msg(JSON.stringify(data.data));
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    //请求出错处理
+                    layer.msg("Ajax Error:"+textStatus);
+                }
+            });
+            return false;
+        });
+
+        layui.$('#LAY-component-form-addBaggage').on('click', function () {
+            // console.log(tableIns);
+            // console.log(typeof tableIns.config.data);
+            tableIns.config.data.push({id: id});
+            id++;
+            // tableIns.reload();
+            tableIns = table.reload('table', {
+                data: tableIns.config.data
+            });
+        });
+
+        //表单赋值
+        layui.$('#LAY-component-form-setval').on('click', function () {
+            form.val('example', {
+                "passenger": 'common'
+                , "class_": "LuxuryFirstClass" // "name": "value"
+                , "start": "cny"
+                , "area": "domestic"
+                , "fare": 1000
+                , "type": 'usual'
+            });
+        });
+
+        //监听折叠
+        // element.on('collapse(test)', function (data) {
+        //     layer.msg('展开状态：' + data.show);
+        // });
+        Array.prototype.indexOf = function (val) {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i].id === val.id) return i;
+            }
+            return -1;
+        };
+        Array.prototype.remove = function (val) {
+            var index = this.indexOf(val);
+            if (index > -1) {
+                this.splice(index, 1);
+            }
+        };
+    });
+</script>
+</body>
+</html>

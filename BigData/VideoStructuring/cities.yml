@@ -1,0 +1,14 @@
+version: "3"
+services:
+  cities:
+    image: chunibyo/cities:latest
+    container_name: cities
+    restart: unless-stopped
+    ports:
+        - 80:5000
+    volumes:
+        - /home/chunibyo/02_disk/04_project/22_SmartCities/data:/home/app/data
+    environment:
+        - STREAM=http://172.17.0.1:8888/video_feed
+        - NAMES_PATH=./data/darknet/coco.names
+        - WEIGHT_PATH=./data/darknet/yolov4.weights
